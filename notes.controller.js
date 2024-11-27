@@ -29,11 +29,9 @@ async function saveNotes(notes) {
 async function removeNote(id) {
   const notes = await getNotes()
 
-  notes.forEach(function (el, i) {
-    if (el.id === id) notes.splice(i, 1)
-  })
+  const a = notes.filter((note) => note.id !== id)
 
-  await saveNotes(notes)
+  await saveNotes(a)
 }
 
 async function printNotes() {
