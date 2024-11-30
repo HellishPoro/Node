@@ -36,6 +36,8 @@ document.addEventListener('click', event => {
             >
               &times;
             </button>`
+
+      window.location = window.location.href
     })
   }
 })
